@@ -94,7 +94,9 @@ article.save
 	article = Article.find(id of article you want to delete)
 	article.destroy
 ```
+
 #### 5. Validations
+
 ```ruby
 class Article < ApplicationRecord
 
