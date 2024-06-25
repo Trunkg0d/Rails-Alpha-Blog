@@ -70,7 +70,8 @@ article.save
 	`Article.find(1) # replace 1 with id of article you want to find`
 
 - You can save this to a variable and use it like below
-	```ruby
+
+```ruby
 	article = Article.find(1)
 	article.title # to display (get) the title
 	article.description # to display (get) the description
@@ -82,7 +83,7 @@ article.save
 	2. `Article.last # display the last article in the articles table
 
 - You can update an article by finding it first and then using setters for the attributes that the model provides like below:
-	```ruby
+```ruby
 	article = Article.find(id of article you want to edit)
 	article.title = "new title"
 	article.description = "new description"
@@ -90,7 +91,7 @@ article.save
 ```
 
 - You can delete an article by using the destroy method. A sample sequence could be like below:
-	```ruby
+```ruby
 	article = Article.find(id of article you want to delete)
 	article.destroy
 ```
