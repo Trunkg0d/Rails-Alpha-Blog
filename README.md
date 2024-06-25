@@ -79,8 +79,8 @@ article.save
 
 - You can use the methods below to view the first and last articles of the articles table:
 
-	1. `Article.first # display the first article in the articles table
-	2. `Article.last # display the last article in the articles table
+	1. `Article.first` # display the first article in the articles table
+	2. `Article.last` # display the last article in the articles table
 
 - You can update an article by finding it first and then using setters for the attributes that the model provides like below:
 ```ruby
@@ -140,7 +140,7 @@ You will also need to create a view template for the new view. So, in the app/vi
 ```
 #### 7. Messaging - validation and flash messages
 In order to display the validation messages, we have to add an if else block to our create action. This is done to check for if the save happened, if not (else clause) then we display the new form again with the messages displayed. The create action would look like below:
-```html
+```ruby
 def create
 	@article = Article.new(params.require(:article).permit(:title, :description))
 	if @article.save
