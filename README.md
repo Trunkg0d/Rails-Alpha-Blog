@@ -23,9 +23,19 @@ Additional example:
 - If you have run the rollback step, then you can update the previous migration file and add the following line to add a description attribute (column) to the articles table:
 	```t.text :description```
 - To run the newly edited migration file again, you can run `rails db:migrate`
+Note: This above line will only work if you had rolled back the prior migration. The final file will be:
+```ruby
+class CreateArticles < ActiveRecord::Migration[6.1]
+  def change
+    create_table :articles do |t|
+      t.string :title
+      t.text :description
+      t.timestamps
+    end
+  end
+end
 
-Note: This above line will only work if you had rolled back the prior migration.
-
+```
 To generate a new migration file to add or make changes to your articles table you can generate a new file:
 `rails generate migration name_of_migration_file`
 
